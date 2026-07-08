@@ -154,11 +154,11 @@ document.addEventListener('DOMContentLoaded', () => {
       statusEl.className = 'form-status';
 
       try {
-        // Sends to this site's own /api/contact endpoint (see server.js and the
-        // HTML comment above the <form> for the one-time SMTP setup steps).
+        // Sends to Formspree (see the HTML comment above the <form> for setup steps).
+        // Replace the form's action="" URL with your real Formspree endpoint before going live.
         const response = await fetch(form.action, {
           method: 'POST',
-          body: new URLSearchParams(new FormData(form)),
+          body: new FormData(form),
           headers: { Accept: 'application/json' },
         });
 

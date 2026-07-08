@@ -2,15 +2,12 @@
   "name": "belix-website",
   "version": "1.0.0",
   "private": true,
-  "description": "Belix marketing website — static HTML/CSS/JS, served via a Node server for Hostinger Node.js Git deploy, plus a /api/contact endpoint that emails quote requests.",
+  "description": "Belix marketing website — static HTML/CSS/JS, served via a zero-dependency Node server for Hostinger Node.js Git deploy.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "engines": {
     "node": ">=18"
-  },
-  "dependencies": {
-    "nodemailer": "^6.9.14"
   }
 }
