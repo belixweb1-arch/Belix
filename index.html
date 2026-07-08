@@ -543,16 +543,19 @@
 
         <div class="contact-wrapper reveal">
           <!--
-            FORM SUBMISSION (no backend):
-            This form posts to Formspree (https://formspree.io) via JavaScript fetch() — see js/main.js.
-            1. Sign up for a free account at https://formspree.io using belixweb1@gmail.com
-            2. Create a new form there and copy the Form ID it gives you (looks like "abcdwxyz")
-            3. Replace "YOUR_FORM_ID" in the action="" attribute below with that real ID
-            Alternative options (not used here, but drop-in replacements):
-              - EmailJS (https://www.emailjs.com) sends mail directly from JS without any redirect.
-              - A plain "mailto:belixweb1@gmail.com" link as a zero-setup fallback (no delivery confirmation).
+            FORM SUBMISSION:
+            This form posts to this site's own /api/contact endpoint (see server.js),
+            which emails submissions to belixweb1@gmail.com via Gmail SMTP using nodemailer.
+            Required one-time setup on the Hostinger Node.js app (NOT in this file):
+              1. Generate a Google Account "App Password" for belixweb1@gmail.com at
+                 https://myaccount.google.com/apppasswords (requires 2-Step Verification enabled)
+              2. In Hostinger's Node.js app settings, add environment variables:
+                   GMAIL_USER = belixweb1@gmail.com
+                   GMAIL_APP_PASSWORD = the generated app password
+              3. Redeploy the app
+            The action="" attribute below is also a plain-HTML fallback if JavaScript is disabled.
           -->
-          <form id="contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <form id="contact-form" class="contact-form" action="/api/contact" method="POST" novalidate>
 
             <div class="form-row">
               <div class="form-group">
