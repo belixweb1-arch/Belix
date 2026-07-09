@@ -164,10 +164,19 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--color-primary-dark);
   letter-spacing: -0.02em;
+}
+
+.logo-mark {
+  width: 30px;
+  height: 30px;
+  display: block;
 }
 
 .main-nav { flex: 1; }
