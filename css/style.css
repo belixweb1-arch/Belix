@@ -325,7 +325,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 }
 .type-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
 
-.type-card img { width: 100%; height: 220px; object-fit: cover; }
+.type-card img { width: 100%; height: 220px; object-fit: cover; object-position: top; }
 
 .type-card-body { padding: 26px; }
 .type-card-body h3 { font-size: 1.25rem; margin-bottom: 10px; }
